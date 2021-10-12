@@ -12,7 +12,7 @@
 #define QWERTY 0
 #define GAMING 1
 #define NUMPAD 2
-#define MOUSE 3
+#define NUMROW 3
 #define ADJUST 4
 #define CONFIG 5
 
@@ -62,8 +62,8 @@
                         >;
                 };
 
-                mouse_layer {
-                        label = "MOUSE";
+                numrow_layer {
+                        label = "NUMROW";
                         bindings = <
    &kp F1 &kp F2 &kp F3    &kp F4    &kp F5       &kp F6   &kp F7   &kp F8 &kp F9    &kp F10   &kp F11 &kp F12
    &none   &none  &none  &kp PSCRN &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
