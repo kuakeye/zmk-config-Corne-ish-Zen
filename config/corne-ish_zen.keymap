@@ -35,22 +35,13 @@
                 default_layer {
                         label = "QWERTY";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BSLH
-   &kp BKSP  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &lt NUMROW SEMI &kp QUOT
-   &mt LCTL ESC &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp CMMA &kp DOT &kp FSLH &kp RSFT
-          &mt LALT LGUI &mo NUMPAD &mt LSHFT ENTER    &kp SPC &mo NUMPAD &mo GAMING
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I    &kp O   &kp P           &kp BSLH
+   &kp BKSP  &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K    &kp L   &lt NUMROW SEMI &kp QUOT
+&mt LCTL ESC &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M &kp CMMA &kp DOT &kp FSLH        &kp RSFT
+  &mt LALT LGUI &mo NUMPAD &mt LSHFT ENTER         &kp SPC &mo NUMPAD &mo GAMING
                         >;
                 };
 
-                gaming_layer {
-                        label = "GAMING";
-                        bindings = <
-   &kp F1    &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-   &kp LALT  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L    &kp QUOT &kp F13
-   &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA &kp DOT &kp FSLH &kp RSFT
-               &kp LCTL &mo NUMROW &mt LSHFT ENTER       &kp SPC &mo ADJUST &kp F13
-                        >;
-                };
 
                 numpad_layer {
                         label = "NUMPAD";
@@ -58,20 +49,30 @@
      &kp TAB   &kp EXCL &kp AT &kp LBRC &kp RBRC &kp PIPE       &kp LT    &kp N7  &kp N8 &kp N9 &kp ASTRK  &tog NUMPAD
 &kp UNDER &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp GRAVE       &kp GT    &kp N4  &kp N5 &kp N6 &kp MINUS  &kp KP_EQUAL
     &none &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE       &kp AMPS  &kp N1  &kp N2 &kp N3 &kp PLUS   &kp KP_NLCK
-            &mo CONFIG &mo NUMROW &mt LSHFT ENTER               &kp SPC   &kp DOT &kp N0
+                    &mo CONFIG &mo NUMROW &mt LSHFT ENTER       &kp SPC   &kp DOT &kp N0
                         >;
                 };
 
                 numrow_layer {
                         label = "NUMROW";
                         bindings = <
-   &none     &none  &none  &none   &none   &none        &none   &none     &kp UP    &none      &none &none
-   &kp BKSP  &none  &none  &none &none &none            &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none &none
-   &none     &none  &none  &none &kp LBKT  &kp RBKT     &none    &none    &none  &none     &none    &none 
-                     &mo CONFIG &kp LCTL &mo NUMROW    &kp ENTER &mo ADJUST &kp F13
+   &none     &none  &none     &kp PG_UP  &none   &none        &none    &none     &kp UP        &none            &none  &none
+   &kp BKSP  &none  &kp HOME  &kp PG_DN  &kp END &none        &none    &kp LEFT  &kp DOWN      &kp RIGHT     &none  &kp K_PP
+   &none     &none  &none  &none &kp LBKT  &kp RBKT           &kp C_AC_BACK    &kp C_AC_FORWARD     &kp C_VOL_DN  &kp C_VOL_UP  &none  &none 
+                     &mo CONFIG &kp LCTL &kp DEL              &kp SPC  &mo ADJUST &none
                         >;
                 };
-
+                
+                gaming_layer {
+                        label = "GAMING";
+                        bindings = <
+   &kp F1    &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+   &kp LALT  &kp A   &kp S   &kp T   &kp LG(LG(SPC))   &kp G       &kp H   &kp J   &kp K   &kp L    &kp QUOT &kp F13
+   &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA &kp DOT &kp FSLH &kp K_LOCK
+               &kp LCTL &mo NUMROW &mt LSHFT ENTER       &kp SPC &mo ADJUST &kp F13
+                        >;
+                };
+                
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
