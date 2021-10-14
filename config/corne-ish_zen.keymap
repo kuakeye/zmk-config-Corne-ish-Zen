@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define GAMING 1
-#define NUMPAD 2
-#define NUMROW 3
+#define NUMPAD 1
+#define NUMROW 2
+#define GAMING 3
 #define ADJUST 4
 #define CONFIG 5
 
