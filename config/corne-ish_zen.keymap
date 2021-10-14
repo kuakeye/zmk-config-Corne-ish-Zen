@@ -57,8 +57,8 @@
                         label = "NUMROW";
                         bindings = <
    &none     &none  &none     &kp PG_UP  &none   &none        &none    &none     &kp UP        &none            &none  &none
-   &kp BKSP  &none  &kp HOME  &kp PG_DN  &kp END &none        &none    &kp LEFT  &kp DOWN      &kp RIGHT     &none  &kp K_PP
-   &none     &none  &none  &none &kp LBKT  &kp RBKT           &kp C_AC_BACK    &kp C_AC_FORWARD     &kp C_VOL_DN  &kp C_VOL_UP  &none  &none 
+   &kp BKSP  &none  &kp HOME  &kp PG_DN  &kp END &none        &none    &kp LEFT  &kp DOWN      &kp RIGHT     &none  &kp C_PP
+   &none     &none  &none  &none &kp LBKT  &kp RBKT           &kp C_PREV    &kp NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none  &none 
                      &mo CONFIG &kp LCTL &kp DEL              &kp SPC  &mo ADJUST &none
                         >;
                 };
