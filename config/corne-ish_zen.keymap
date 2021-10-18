@@ -56,7 +56,7 @@
                 numrow_layer {
                         label = "NUMROW";
                         bindings = <
-   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &kp PG_UP  &kp LC(LG(R))  &kp (LG(LA(P)))      &none        &none          &kp UP        &none         &none        &none
+   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &kp PG_UP  &kp LC(LG(R))  &kp LC((LG(LA(P))))      &none        &none          &kp UP        &none         &none        &none
    &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &kp HOME  &kp PG_DN  &kp END        &none                 &none        &kp LEFT       &kp DOWN      &kp RIGHT     &tog NUMROW  &kp C_PP
    &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &kp LBKT       &kp RBKT              &kp C_PREV   &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none        &none 
                                                          &mo CONFIG &kp LCTL       &kp DEL               &kp SPC      &mo ADJUST     &none
