@@ -67,7 +67,7 @@
                         label = "GAMING";
                         bindings = <
    &kp F1    &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-   &kp LALT  &kp A   &kp S   &kp S   &kp S   &kp G       &kp H   &kp LG(SPC)   &kp LG(LA(SPC))    &kp LA(LC(SPC))  &tog NUMROW &kp LGUI
+   &kp LALT  &kp A   &kp S   &kp S   &kp S   &kp G       &kp H   &kp J   &kp K   &kp C_AL_LOCK  &none &kp LGUI
    &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA &kp DOT &kp FSLH &kp C_AL_LOCK
                &kp LCTL &mo NUMROW &mt LSHFT ENTER       &kp SPC &mo ADJUST &kp F13
                         >;
