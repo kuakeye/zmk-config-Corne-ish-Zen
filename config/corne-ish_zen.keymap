@@ -9,12 +9,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define QWERTY 0
-#define NUMPAD 1
-#define NUMROW 2
-#define GAMING 3
-#define ADJUST 4
-#define CONFIG 5
+#define QWERTY   0
+#define NUMSYM   1
+#define WNDWCTRL 2
+#define TXTNAV   3
+#define ADJUST   4
+#define CONFIG   5
 
 / {
         behaviors {
@@ -35,62 +35,74 @@
                 default_layer {
                         label = "QWERTY";
                         bindings = <
-                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I    &kp O   &kp P           &kp BSLH
-                 &kp BKSP  &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K    &kp L   &lt NUMROW SEMI &kp QUOT
-&mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt NUMROW B         &lt NUMROW N &kp M &kp CMMA &kp DOT &kp FSLH        &kp RSFT
-                &mt LALT LGUI &mo NUMPAD &mt LSHFT ENTER         &kp SPC &mo NUMPAD &mo GAMING
+                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I    &kp O   &kp P           &kp BSLH
+                 &kp BKSP  &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K    &kp L   &lt WNDWCTRL SEMI &kp QUOT
+&mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt WNDWCTRL B         &lt WNDWCTRL N &kp M &kp CMMA &kp DOT &kp FSLH        &kp RSFT
+                &mt LALT LGUI &mo NUMSYM &mt LSHFT ENTER         &kp SPC &mo NUMSYM &tog TXTNAV
                         >;
                 };
 
 
                 numpad_layer {
-                        label = "NUMPAD";
+                        label = "NUMSYM";
                         bindings = < 
      &kp TAB   &kp EXCL &kp AT &kp LBRC &kp RBRC &kp PIPE       &kp LT    &kp N7  &kp N8 &kp N9 &kp ASTRK  &none
 &kp UNDER &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp GRAVE       &kp GT    &kp N4  &kp N5 &kp N6 &kp MINUS  &kp EQUAL
     &none &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE       &kp AMPS  &kp N1  &kp N2 &kp N3 &kp PLUS   &kp KP_NLCK
-                    &mo CONFIG &mo NUMROW &mt LSHFT ENTER       &kp SPC   &kp DOT &kp N0
+                              &none &none &mt LSHFT ENTER       &kp SPC   &kp DOT &kp N0
                         >;
                 };
 
-                numrow_layer {
-                        label = "NUMROW";
+                wincontrol_layer {
+                        label = "WNDWCTRL";
                         bindings = <
-   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &kp PG_UP  &kp LS(LG(S))  &kp LC(LS(4))      &none        &none          &kp UP        &none         &none        &none
-   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &kp HOME  &kp PG_DN  &kp END        &none                 &none        &kp LEFT       &kp DOWN      &kp RIGHT     &tog NUMROW  &kp C_PP
-   &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &kp LBKT       &kp RBKT              &kp C_PREV   &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none        &none 
+   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &none      &kp LS(LG(S))  &kp LC(LS(4))         &none        &none          &none        &none         &none        &none
+   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &none     &none      &none          &none                 &none        &none          &none        &none         &none        &kp C_PP
+   &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &kp LBKT       &kp RBKT              &kp C_PREV   &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
                                                          &mo CONFIG &kp LCTL       &kp DEL               &kp SPC      &mo ADJUST     &none
                         >;
                 };
                 
-                gaming_layer {
-                        label = "GAMING";
+                textnav_layer {
+                        label = "TXTNAV";
                         bindings = <
-   &kp F1    &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-   &kp LALT  &kp A   &kp S   &kp S   &kp S   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SEMI &kp LG(L)
-   &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA &kp DOT &kp FSLH &kp C_AL_LOCK
-               &kp LCTL &mo NUMROW &mt LSHFT ENTER       &kp SPC &mo ADJUST &kp F13
+   &none    &none   &none     &kp PG_UP        &none    &none                       &none    &none      &kp UP     &none      &none  &none
+   &none    &none   &kp HOME  &kp PG_DN        &kp END  &none                       &none    &kp LEFT   &kp DOWN   &kp RIGHT  &none  &none
+   &none    &LC(Z)  &LC(X)    &LC(C)           &LC(V)   &none                       &none    &none      &none      &none      &none  &none
+                             &tog QWERTY      &none     &mt LSHFT ENTER            &kp SPC   &none      &tog ADJUST 
                         >;
                 };
                 
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
-   &none       &none  &none  &none    &kp LA(LS(G)) &kp F6    &kp F7   &kp F8   &kp F9 &kp F10   &kp F11 &kp F12
-   &none       &none  &none  &kp F3   &none  &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none   &none
-   &tog NUMPAD &none  &none  &kp LC(LA(H))   &none  &none     &none    &none    &none  &none     &none   &none
-                      &kp LGUI &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &tog GAMING
+   &none       &none  &none    &none           &kp LA(LS(G)) &kp F6         &kp F9   &kp F10     &kp F11  &kp F12   &none   &none
+   &none       &none  &none    &kp F3          &none         &none          &kp F5   &kp F6      &kp F7   &kp F8    &none   &none
+   &none       &none  &none    &kp LC(LA(H))   &none         &none          &kp F1   &kp F2      &kp F3   &kp F4    &none  &none
+                               &tog TXTNAV     &kp LCTL      &kp LSHFT      &kp SPC  &none       &tog CONFIG
                         >;
                 };
 
                 config_layer {
                         label = "CONFIG";
                         bindings = <
-   &reset     &none        &none        &none        &none        &none           &none &none &none &none &none &none 
+   &reset     &none        &none        &none        &none        &none           &none &none &none &none &none &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none &none
    &none      &none        &none        &none        &none        &none           &none &none &none &none &none &none
-                                                &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &kp F13
+                                        &mo CONFIG   &kp LCTL     &mo NUMROW      &kp SPC &none &none
                         >;
                 };
         };
 };
+
+/* empty layer template
+                empty_layer {
+                        label = "CONFIG";
+                        bindings = <
+   &none    &none  &none  &none  &none  &none            &none   &none   &none   &none  &none  &none
+   &none    &none  &none  &none  &none  &none            &none   &none   &none   &none  &none  &none
+   &none    &none  &none  &none  &none  &none            &none   &none   &none   &none  &none  &none
+                          &none  &none  &none            &none   &none   &none 
+                        >;
+                };
+*/
