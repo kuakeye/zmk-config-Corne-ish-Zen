@@ -57,7 +57,7 @@
                         label = "WNDWCTRL";
                         bindings = <
    &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &none      &kp LS(LG(S))  &kp LC(LS(4))         &none        &none          &none        &none         &none        &none
-   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &none     &none      &none          &none                 &none        &kp LG(L)      &none        &none         &none        &kp C_PP
+   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &none     &none      &none          &none                 &none        &none      &none        &kp LG(L)         &none        &kp C_PP
    &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &kp LBKT       &kp RBKT              &kp C_PREV   &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
                                                          &mo CONFIG &kp LCTL       &kp DEL               &kp SPC      &mo ADJUST     &none
                         >;
