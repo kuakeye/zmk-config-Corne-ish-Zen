@@ -35,10 +35,10 @@
                 default_layer {
                         label = "QWERTY";
                         bindings = <
-                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I    &kp O   &kp P           &kp BSLH
-                 &kp BKSP  &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K    &kp L   &lt WNDWCTRL SEMI &kp QUOT
-&mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt WNDWCTRL B       &lt WNDWCTRL N &kp M &kp CMMA &kp DOT &kp FSLH        &kp RSFT
-                 &mo NUMSYM &mt LALT LGUI &mt LSHFT ENTER        &kp SPC &to TXTNAV &mo NUMSYM
+                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y            &kp U      &kp I      &kp O   &kp P     &kp BSLH
+ &kp BKSP  &kp A &kp S &kp D &kp F &kp G                         &kp H            &kp J      &kp K      &kp L   &kp SEMI  &kp QUOT
+&mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt WNDWCTRL B       &kp N            &kp M      &kp CMMA   &kp DOT &kp FSLH  &kp RSFT
+                 &mo NUMSYM &mt LALT LGUI &mt LSHFT ENTER        &lt WNDWCTRL SPC &to TXTNAV &mo NUMSYM
                         >;
                 };
 
@@ -56,40 +56,40 @@
                 wincontrol_layer {
                         label = "WNDWCTRL";
                         bindings = <
-   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &none      &kp LS(LG(S))  &kp LC(LS(4))         &none        &none          &none        &none         &none        &none
-   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &none     &none      &none          &none                 &none        &none      &none        &kp LG(L)         &none        &kp C_PP
-   &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &kp LBKT       &kp RBKT              &kp C_PREV   &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP  &none       &none 
-                                                         &mo CONFIG &kp LCTL       &kp DEL               &kp SPC      &mo ADJUST     &none
+   &kp LC(LG(LS(LEFT)))  &kp LC(LG(LS(RIGHT))) &none     &none      &kp LS(LG(S))  &kp LC(LS(4))      &none &none                                &none      &none       &kp C_PP    &kp C_VOL_UP
+   &kp LC(LG(LEFT))      &kp LC(LG(RIGHT))     &none     &none      &none          &none              &none &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &kp LG(L)  &none       &kp C_VOL_DN
+   &kp LG(LA(LEFT))      &kp LG(LA(RIGHT))     &none     &none      &none          &none              &none &none             &none              &none      &kp C_PREV  &kp C_NEXT
+                                                         &none      &none          &none              &none &none             &none
                         >;
                 };
                 
                 textnav_layer {
                         label = "TXTNAV";
                         bindings = <
-   &none    &none      &none        &kp PG_UP        &none      &none                       &none     &none      &kp UP     &none      &none   &none
-   &kp BKSP    &kp DEL   &kp HOME     &kp PG_DN        &kp END    &none                       &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none  &none
-   &mt LCTL ESC    &kp LC(Z)  &kp LC(X)    &kp LC(C)        &kp LC(V)  &none                       &none     &none      &none      &none      &none   &none
-                                    &to QWERTY      &none      &mt LSHFT ENTER             &kp SPC   &none      &to ADJUST 
+   &none          &none      &none        &kp PG_UP    &none      &none                    &none     &none      &kp UP     &none      &none   &none
+   &kp BKSP       &none      &kp HOME     &kp PG_DN    &kp END    &none                    &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none  &kp DEL
+   &mt LCTL ESC   &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)  &none                    &none     &none      &none      &none      &none   &none
+                                           &none       &to QWERTY &mt LSHFT ENTER          &kp SPC   &to ADJUST &none       
                         >;
                 };
                 
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
-   &none       &none  &none    &none           &kp LS(F12) &kp F6          &none   &kp F9   &kp F10     &kp F11  &kp F12    &none
-   &kp BKSP       &none  &none    &kp F12          &none         &none        &none   &kp F5   &kp F6      &kp F7   &kp F8       &none
-   &none       &none  &none    &kp LA(F12)   &none         &none           &none   &kp F1   &kp F2      &kp F3   &kp F4      &none
-                               &to QWERTY     &none         &kp LSHFT        &kp SPC &none    &to CONFIG
+   &none      &none  &none    &none         &kp LS(F12)   &kp F6          &none   &kp F9     &kp F10     &kp F11  &kp F12    &none
+   &kp BKSP   &none  &none    &kp F12       &none         &none           &none   &kp F5     &kp F6      &kp F7   &kp F8       &none
+   &none      &none  &none    &kp LA(F12)   &none         &none           &none   &kp F1     &kp F2      &kp F3   &kp F4      &none
+                              &none         &to QWERTY    &kp LSHFT       &kp SPC &to CONFIG &none    
                         >;
                 };
 
                 config_layer {
                         label = "CONFIG";
                         bindings = <
-   &reset     &none        &none        &none        &none        &none           &none &none &none &none &none &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none &none
-   &none      &none        &none        &none         &none       &none           &none &none &none &none &none &none
-                                        &to QWERTY   &none       &none           &kp SPC &none &none
+   &reset     &none        &none        &none        &none        &none           &none   &none &none &none &none &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none   &none &none &none &none &none
+   &none      &none        &none        &none        &none        &none           &none   &none &none &none &none &none
+                                        &none        &to QWERTY   &none           &kp SPC &none &none
                         >;
                 };
         };
