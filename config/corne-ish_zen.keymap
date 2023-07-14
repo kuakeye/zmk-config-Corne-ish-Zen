@@ -38,7 +38,7 @@
                  &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y            &kp U      &kp I      &kp O   &kp P     &kp BSLH
  &kp BKSP  &kp A &kp S &kp D &kp F &kp G                         &kp H            &kp J      &kp K      &kp L   &kp SEMI  &kp QUOT
 &mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt WNDWCTRL B       &kp N            &kp M      &kp CMMA   &kp DOT &kp FSLH  &kp RSFT
-                 &mo NUMSYM &mt LALT LGUI &mt LSHFT ENTER        &lt WNDWCTRL SPC &to TXTNAV &mo NUMSYM
+                 &mo NUMSYM &mt LALT LGUI &mt LSHFT ENTER        &lt TXTNAV SPC   &to TXTNAV &mo NUMSYM
                         >;
                 };
 
