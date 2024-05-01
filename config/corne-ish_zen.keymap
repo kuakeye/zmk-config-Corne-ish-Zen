@@ -38,7 +38,7 @@
                  &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y            &kp U      &kp I      &kp O   &kp P     &kp BSLH
  &kp BKSP  &kp A &kp S &kp D &kp F &kp G                         &kp H            &kp J      &kp K      &kp L   &kp SEMI  &kp QUOT
 &mt LCTL ESC &kp Z &kp X &kp C &lt ADJUST V &lt WNDWCTRL B       &lt WNDWCTRL N            &kp M      &kp CMMA   &kp DOT &kp FSLH  &kp RSFT
-                 &mo NUMSYM &mt LALT LGUI &mt LSHFT ENTER        &lt TXTNAV SPC   &to TXTNAV &mo NUMSYM
+                 &mt LALT LGUI &mo NUMSYM &mt LSHFT ENTER        &lt TXTNAV SPC &mo NUMSYM  &to TXTNAV 
                         >;
                 };
 
@@ -69,7 +69,7 @@
    &none          &none      &none        &kp PG_UP    &none      &none                    &none     &none      &kp UP     &none      &none   &none
    &kp BKSP       &none      &kp HOME     &kp PG_DN    &kp END    &none                    &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none  &kp DEL
    &mt LCTL ESC   &kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)  &none                    &none     &none      &none      &none      &none   &none
-                                           &none       &to QWERTY &mt LSHFT ENTER          &kp SPC   &to ADJUST &none       
+                                          &to QWERTY   &none      &mt LSHFT ENTER          &kp SPC   &none      &to ADJUST       
                         >;
                 };
                 
@@ -79,7 +79,7 @@
    &none      &none  &none    &none         &kp LS(F12)   &kp F6          &none   &kp F9     &kp F10     &kp F11  &kp F12    &none
    &kp BKSP   &none  &none    &kp F12       &none         &none           &none   &kp F5     &kp F6      &kp F7   &kp F8       &none
    &none      &none  &none    &kp LA(F12)   &none         &none           &none   &kp F1     &kp F2      &kp F3   &kp F4      &none
-                              &none         &to QWERTY    &kp LSHFT       &kp SPC &to CONFIG &none    
+                              &to QWERTY    &none         &kp LSHFT       &kp SPC &none      &to CONFIG
                         >;
                 };
 
@@ -89,7 +89,7 @@
    &reset     &none        &none        &none        &none        &none           &none   &none &none &none &none &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none   &none &none &none &none &none
    &none      &none        &none        &none        &none        &none           &none   &none &none &none &none &none
-                                        &none        &to QWERTY   &none           &kp SPC &none &none
+                                        &to QWERTY   &none        &none           &kp SPC &none &none
                         >;
                 };
         };
